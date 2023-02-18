@@ -9,7 +9,6 @@ USER_ID=$($PSQL "SELECT user_id FROM users WHERE user_name = '$USER_NAME'")
 # echo "User ID after requesting: $USER_ID"
 if [[ -z $USER_ID ]]
 then
-  echo ""
   echo "Welcome, $USER_NAME! It looks like this is your first time here."
   GAMES_PLAYED=0
   BEST_GAME=1000
@@ -61,4 +60,3 @@ do
   echo "That is not an integer, guess again:"
   fi
 done
-
